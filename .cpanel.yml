@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/curr6441/public_html/
+    - /bin/cp -R -f vitae/src/* $DEPLOYPATH
+    - /bin/cp -f vitae/src/.htaccess $DEPLOYPATH
