@@ -1,0 +1,11 @@
+**/vendor/
+**/.env
+**/.env.*
+**/node_modules/
+**/.DS_Store
+**/Thumbs.db
+**/*.log
+**/*.swp
+**/.idea/
+**/.vscode/
+**/oauth.local.php

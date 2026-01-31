@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; margin: 0; padding: 0; line-height: 1.6; color: #334155; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); margin-top: 40px; margin-bottom: 40px; }
+        .header { background: linear-gradient(135deg, #7e22ce 0%, #4f46e5 100%); padding: 40px 20px; text-align: center; }
+        .logo { font-size: 24px; font-weight: 800; color: #ffffff; text-decoration: none; letter-spacing: -0.5px; }
+        .content { padding: 40px 30px; }
+        .footer { background-color: #f1f5f9; padding: 20px; text-align: center; font-size: 12px; color: #94a3b8; }
+        .btn { display: inline-block; padding: 14px 28px; background-color: #7e22ce; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 20px; }
+        .btn:hover { background-color: #6b21a8; }
+        .divider { height: 1px; background-color: #e2e8f0; margin: 30px 0; }
+        .link-alt { color: #7e22ce; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <div class="logo">Currículo Vitae Pro</div>
+        </div>
+
+        <!-- Conteúdo Injetado -->
+        <div class="content">
+            {{content}}
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <p>&copy; {{year}} Currículo Vitae Pro. Todos os direitos reservados.</p>
+            <p>Você recebeu este e-mail porque solicitou uma ação em nossa plataforma.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<IfModule mod_rewrite.c>
+    # Configuração de Motor
+    RewriteEngine On
+    RewriteBase /
+    Options -Indexes -MultiViews
+
+    # 1. Forçar HTTPS
+    RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+    # 2. Arquivos Reais (Assets)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 3. ROTAS EXPLÍCITAS (Caminhos Absolutos)
+    # A barra "/" garante que vamos para a raiz
+    RewriteRule ^entrar/?$ login.php [L,QSA]
+    RewriteRule ^criar-conta/?$ register.php [L,QSA]
+    RewriteRule ^painel/?$ dashboard.php [L,QSA]
+    RewriteRule ^privacidade/?$ privacy.php [L,QSA]
+    RewriteRule ^termos-de-uso/?$ terms.php [L,QSA]
+    RewriteRule ^recuperar-senha/?$ forgot_password.php [L,QSA]
+    RewriteRule ^minha-conta/?$ user_profile.php [L,QSA]
+    RewriteRule ^sair/?$ logout.php [L,QSA]
+
+    # Funcionalidades
+    RewriteRule ^planos/?$ upgrade.php [L,QSA]
+    RewriteRule ^sobre/?$ about.php [L,QSA]
+    RewriteRule ^contato/?$ contact.php [L,QSA]
+    RewriteRule ^magic-login/?$ magic_login.php [L,QSA]
+
+    # Editor
+    RewriteRule ^editor/([^/]+)/?$ editor.php?id=$1 [L,QSA]
+    RewriteRule ^editor/?$ editor.php [L,QSA]
+
+    # Blog - Ordem importa (mais específico primeiro)
+    RewriteRule ^blog/([^/]+)/([^/]+)/?$ blog_post.php?category=$1&slug=$2 [L,QSA]
+    RewriteRule ^blog/([^/]+)/?$ blog_post.php?fallback_slug=$1 [L,QSA]
+    RewriteRule ^blog/?$ blog.php [L,QSA]
+
+    # 4. Fallback simples (Tenta adicionar .php)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+    RewriteRule ^([^/]+)/?$ $1.php [L]
+
+    # 5. Página de Erro
+    ErrorDocument 404 /404.php
+</IfModule>

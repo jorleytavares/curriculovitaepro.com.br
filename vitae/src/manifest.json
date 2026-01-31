@@ -1,0 +1,44 @@
+{
+  "name": "Currículo Vitae Pro",
+  "short_name": "Vitae Pro",
+  "start_url": "/index.php",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "description": "Crie currículos profissionais otimizados para ATS com IA.",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/public/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/images/icon-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Novo Currículo",
+      "short_name": "Criar",
+      "description": "Criar um novo currículo profissional",
+      "url": "/dashboard.php?action=new",
+      "icons": [{ "src": "/public/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Meus Currículos",
+      "short_name": "Painel",
+      "description": "Ver meus currículos salvos",
+      "url": "/dashboard.php",
+      "icons": [{ "src": "/public/images/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

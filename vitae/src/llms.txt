@@ -1,0 +1,13 @@
+# Currículo Vitae Pro - Context for LLMs
+
+Project: Currículo Vitae Pro
+Type: SaaS (Free Tool)
+Description: Ferramenta online gratuita para criação, edição e formatação de currículos profissionais.
+Key Features:
+- Otimização automática para sistemas ATS (Applicant Tracking Systems) como Gupy e Kenoby.
+- Assistente de escrita baseado em IA para sugestão de textos e bullet points.
+- Suporte nativo para inclusão de Nome Social e campos para PcD (Pessoas com Deficiência).
+- Exportação em PDF de alta resolução sem marca d'água intrusiva.
+pricing: Free (Gratuito)
+URL: https://curriculovitaepro.com.br/
+Registration: https://curriculovitaepro.com.br/register.php

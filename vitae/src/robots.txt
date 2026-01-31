@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Security & Admin
+Disallow: /includes/
+Disallow: /config/
+Disallow: /vendor/
+Disallow: /logs/
+Disallow: /admin_*.php
+Disallow: /maintenance.php
+Disallow: /api/
+
+# Assets are allowed
+Allow: /public/
+Allow: /assets/
+
+Sitemap: https://curriculovitaepro.com.br/sitemap.xml
